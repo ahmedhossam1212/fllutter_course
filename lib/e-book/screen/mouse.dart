@@ -13,7 +13,7 @@ class MouseScreen extends StatefulWidget {
 class _MouseScreenState extends State<MouseScreen> {
   TextEditingController answerController = TextEditingController();
   var formKey = GlobalKey<FormState>();
-  bool answer = false ; 
+  bool answer = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,9 +37,10 @@ class _MouseScreenState extends State<MouseScreen> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Form( 
+          child: Form(
             key: formKey,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -85,7 +86,7 @@ class _MouseScreenState extends State<MouseScreen> {
                     controller: answerController,
                     type: TextInputType.text,
                     validate: (String value) {
-                      if(value!="double click on that thing") {
+                      if (value != "double click on that thing") {
                         return "Answer is wrong";
                       }
                     },
@@ -97,10 +98,10 @@ class _MouseScreenState extends State<MouseScreen> {
                   child: InkWell(
                     onTap: () {
                       if (formKey.currentState!.validate()) {
-                            setState(() {
-                              answer = true; 
-                            });
-                          }
+                        setState(() {
+                          answer = true;
+                        });
+                      }
                     },
                     child: Container(
                         height: 90,
@@ -116,8 +117,9 @@ class _MouseScreenState extends State<MouseScreen> {
                   ),
                 ),
                 Center(
-                  child: Lottie.network("https://assets1.lottiefiles.com/packages/lf20_5vfzmcqx.json",
-                  height: answer ? 200 : 0 ,
+                  child: Lottie.network(
+                    "https://assets1.lottiefiles.com/packages/lf20_5vfzmcqx.json",
+                    height: answer ? 200 : 0,
                   ),
                 )
               ],
