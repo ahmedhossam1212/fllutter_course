@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_course/e-book/appcolors.dart';
 import 'package:flutter_course/e-book/componant.dart';
 import 'package:flutter_course/e-book/screen/keyboard.dart';
+import 'package:flutter_course/e-book/screen/microsoft_office.dart';
 import 'package:flutter_course/e-book/screen/mouse.dart';
+import 'package:flutter_course/e-book/screen/windows.dart';
 
 class LevelsScreen extends StatelessWidget {
   const LevelsScreen({super.key});
@@ -51,7 +53,7 @@ class LevelsScreen extends StatelessWidget {
           Center(
             child: InkWell(
               onTap: () {
-                navigateTo(context,  KeyboardLevel()); 
+                navigateTo(context, KeyboardLevel());
               },
               child: Container(
                 width: 250,
@@ -74,7 +76,9 @@ class LevelsScreen extends StatelessWidget {
           ),
           Center(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                navigateTo(context, const LevelThree());
+              },
               child: Container(
                 width: 250,
                 height: 70,
@@ -96,7 +100,9 @@ class LevelsScreen extends StatelessWidget {
           ),
           Center(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                navigateTo(context, const LevelFour());
+              },
               child: Container(
                 width: 250,
                 height: 70,
