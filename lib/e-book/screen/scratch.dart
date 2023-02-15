@@ -3,14 +3,14 @@ import 'package:flutter_course/e-book/appcolors.dart';
 import 'package:flutter_course/e-book/componant.dart';
 import 'package:lottie/lottie.dart';
 
-class LevelFour extends StatefulWidget {
-  const LevelFour({super.key});
+class LevelFive extends StatefulWidget {
+  const LevelFive({super.key});
 
   @override
-  State<LevelFour> createState() => _LevelFourState();
+  State<LevelFive> createState() => _LevelFiveState();
 }
 
-class _LevelFourState extends State<LevelFour> {
+class _LevelFiveState extends State<LevelFive> {
   TextEditingController answerController = TextEditingController();
   var formKey = GlobalKey<FormState>();
   bool answer = false;
@@ -31,7 +31,7 @@ class _LevelFourState extends State<LevelFour> {
         elevation: 0.0,
         backgroundColor: AppColors.background,
         title: Text(
-          "Microsoft Office",
+          "Scratch",
           style:
               TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold),
         ),
@@ -50,54 +50,35 @@ class _LevelFourState extends State<LevelFour> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Center(
-                  child: Image.network(
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg/800px-Microsoft_Office_logo_%282019%E2%80%93present%29.svg.png",
-                    height: 300,
-                    width: 300,
-                  ),
-                ),
+                child: Image.network(
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Scratchlogo.svg/1920px-Scratchlogo.svg.png"),
               ),
               const SizedBox(
                 height: 15,
               ),
-              TextArt(text: "Level 4 : ", textColor: AppColors.textColor),
+              TextArt(text: "Level 5 : ", textColor: AppColors.textColor),
               const SizedBox(height: 20),
               TextArt(
                   text:
-                      " Microsoft Office, or simply Office, is a discontinued family of client software, server software, and services developed by Microsoft. It was first announced by Bill Gates on August 1, 1988, at COMDEX in Las Vegas. Initially a marketing term for an office suite (bundled set of productivity applications) ",
-                  textColor: AppColors.textColor),
-              const SizedBox(height: 10),
-              TextArt(
-                  text:
-                      " Microsoft Word: is a word processor included in Microsoft Office and some editions of the now-discontinued Microsoft Works. The first version of Word, released in the autumn of 1983, was for the MS-DOS operating system and introduced the computer mouse to more users",
-                  textColor: AppColors.textColor),
-              const SizedBox(
-                height: 15,
-              ),
-              TextArt(
-                  text:
-                      "Microsoft Excel : is a spreadsheet developed by Microsoft for Windows, macOS, Android and iOS. It features calculation or computation capabilities, graphing tools, pivot tables, and a macro programming language called Visual Basic for Applications (VBA). Excel forms part of the Microsoft Office suite of software.",
-                  textColor: AppColors.textColor),
-              const SizedBox(
-                height: 15,
-              ),
-              TextArt(
-                  text:
-                      "Microsoft PowerPoint : is a presentation program,[7] created by Robert Gaskins and Dennis Austin[7] at a software company named Forethought, Inc.[7] It was released on April 20, 1987,[8] initially for Macintosh computers only.[7] Microsoft acquired PowerPoint for about 14 million three months after it appeared.[9] This was Microsoft's first significant acquisition,[10] and Microsoft set up a new business unit for PowerPoint in Silicon Valley where Forethought had been located",
+                      "Scratch : is a high-level block-based visual programming language and website aimed primarily at children as an educational tool for programming, with a target audience of ages 8 to 16.[6] Users on the site, called Scratchers, can create projects on the website using a block-like interface. Projects can be exported to HTML5, Android apps, Bundle (macOS) and EXE files using external tools. The service is developed by the MIT Media Lab, has been translated into 70+ languages, and is used in most parts of the world.[7] Scratch is taught and used in after-school centers, schools, and colleges, as well as other public knowledge institutions. As of May 8, 2022, community statistics on the language's official website show more than 104 million projects shared by over 90 million users, over 686 million total projects ever created (including unshared projects), and more than 100 million monthly website visits.",
                   textColor: AppColors.textColor),
               const SizedBox(
                 height: 15,
               ),
               Center(
-                  child: Image.network(
-                      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Office_365_app_logos.svg/1920px-Office_365_app_logos.svg.png")),
-              SizedBox(
+                  child: Container(
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Image.network(
+                    "https://upload.wikimedia.org/wikipedia/commons/e/ec/Dialogo_scratch_Best_Friends_1.png"),
+              )),
+              const SizedBox(
                 height: 15,
               ),
               TextArt(
-                  text: "How to write sheet ? ",
-                  textColor: AppColors.textColor),
+                  text: " How Scratch work ? ", textColor: AppColors.textColor),
               const SizedBox(
                 height: 15,
               ),
@@ -105,7 +86,7 @@ class _LevelFourState extends State<LevelFour> {
                   controller: answerController,
                   type: TextInputType.text,
                   validate: (String value) {
-                    if (value != "on excel") {
+                    if (value != "by blocks") {
                       return "Answer is wrong";
                     }
                   },

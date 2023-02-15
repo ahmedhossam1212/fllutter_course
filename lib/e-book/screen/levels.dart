@@ -4,6 +4,7 @@ import 'package:flutter_course/e-book/componant.dart';
 import 'package:flutter_course/e-book/screen/keyboard.dart';
 import 'package:flutter_course/e-book/screen/microsoft_office.dart';
 import 'package:flutter_course/e-book/screen/mouse.dart';
+import 'package:flutter_course/e-book/screen/scratch.dart';
 import 'package:flutter_course/e-book/screen/windows.dart';
 
 class LevelsScreen extends StatelessWidget {
@@ -124,7 +125,9 @@ class LevelsScreen extends StatelessWidget {
           ),
           Center(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                navigateTo(context, const LevelFive());
+              },
               child: Container(
                 width: 250,
                 height: 70,
